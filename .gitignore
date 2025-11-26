@@ -1,0 +1,7 @@
+myenv/
+*.csv
+.ipynb_checkpoints/
+.venv/
+ipynb_checkpoints/
+movie-recomendation-system/
+__pycache__/
