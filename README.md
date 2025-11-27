@@ -8,20 +8,18 @@ The core technology uses a Collaborative Filtering (CF) model to identify hidden
 
 ### 🖼️ App Screenshots / Demo
 
-(I will add my screenshots here after I run the app!)
+<img src="(images/Screenshot (20).png" width="850">
 
 1. The Recommendation Finder
 
 (This screenshot will show the section where the user selects a book and gets the 5 suggestions in the nice card format.)
-![Screenshot of the Top 50 popular books grid](screenshots/popular_books_grid.png)
-
+<img src="(images/Screenshot (23).png" width="850">
 
 2. The Popular Books Grid
 
 (This screenshot will show the scrollable grid of the Top 50 books with their ratings and authors.)
 
-![Screenshot of the Top 50 popular books grid](screenshots/popular_books_grid.png)
-
+<img src="(images/Screenshot (22).png" width="850">
 
 
 ### 🚀 Key Features
