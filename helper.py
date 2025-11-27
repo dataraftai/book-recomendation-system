@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 Books=pd.read_csv("Books.csv")
 Users=pd.read_csv("Users.csv") 
@@ -23,3 +25,33 @@ def popular_books():
     return popular_df
 
 
+# collabarative recomendation system
+
+rating_with_name = pd.merge(Books,Ratings,on="ISBN")
+x = rating_with_name.groupby("User-ID")["Book-Title"].count() > 200
+padhe_likhe_user = x[x].index
+
+filtered_rating = rating_with_name[rating_with_name["User-ID"].isin(padhe_likhe_user)]
+y = filtered_rating.groupby("Book-Title")["Book-Rating"].count()>=50
+famous_books = y[y].index
+
+final_rating = filtered_rating[filtered_rating["Book-Title"].isin(famous_books)]
+pt = final_rating.pivot_table(index="Book-Title",columns="User-ID",values="Book-Rating")
+pt.fillna(0,inplace=True)
+
+
+# similarity_score = cosine_similarity(pt)
+    
+def book_recomend(book_name):
+     # index fetch 
+     similarity_score = cosine_similarity(pt)
+
+     index = np.where(pt.index == book_name)[0][0]
+     similar_items = sorted(list(enumerate(similarity_score[index])),key = lambda x:x[1],reverse=True)[1:6]
+
+     recommendations = []
+
+     for i in similar_items:
+        recommendations.append(pt.index[i[0]])
+        
+     return recommendations

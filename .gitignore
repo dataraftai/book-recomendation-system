@@ -5,3 +5,4 @@ myenv/
 ipynb_checkpoints/
 movie-recomendation-system/
 __pycache__/
+example.py
