@@ -6,7 +6,25 @@ This is a full-stack data science application designed to provide two key featur
 
 The core technology uses a Collaborative Filtering (CF) model to identify hidden relationships between books, ensuring high-quality, relevant suggestions for the user. The application is built entirely in Python, making it robust, fast, and easy to deploy.
 
-### 🚀 Features
+### 🖼️ App Screenshots / Demo
+
+(I will add my screenshots here after I run the app!)
+
+1. The Recommendation Finder
+
+(This screenshot will show the section where the user selects a book and gets the 5 suggestions in the nice card format.)
+![Screenshot of the Top 50 popular books grid](screenshots/popular_books_grid.png)
+
+
+2. The Popular Books Grid
+
+(This screenshot will show the scrollable grid of the Top 50 books with their ratings and authors.)
+
+![Screenshot of the Top 50 popular books grid](screenshots/popular_books_grid.png)
+
+
+
+### 🚀 Key Features
 
 Top 50 Popular Books: Displays the 50 highest-rated books, filtered to ensure they have a minimum number of ratings (250+).
 
@@ -16,36 +34,30 @@ Modern UI: A clean, responsive user interface built using Streamlit that utilize
 
 ### 💻 Tech Stack
 
-Component
+Role : Data Science
 
-Technology
+- Technology : Python (Pandas, NumPy)
 
-Role
+  Data cleaning, filtering, and transformation.
 
-Data Science
+- Scikit-learn (cosine_similarity) : Model inference and calculating item-to-item similarity.
 
-Python (Pandas, NumPy)
+- Streamlit : Rapid development of the interactive web application.
 
-Data cleaning, filtering, and transformation.
+- Version Control : Git / GitHub
 
-Machine Learning
 
-Scikit-learn (cosine_similarity)
+### 📂 Project Structure
 
-Model inference and calculating item-to-item similarity.
+``` text
+.
+├── app.py           # The Streamlit web interface (what the user sees)
+├── helper.py        # All the data loading, cleaning, and model logic
+├── requirements.txt # List of all required Python libraries (e.g., streamlit, pandas)
+├── .gitignore       # Specifies files/folders Git should ignore (e.g., __pycache__)
+└── README.md        # This file
 
-Application UI
-
-Streamlit
-
-Rapid development of the interactive web application.
-
-Version Control
-
-Git / GitHub
-
-Code management and collaboration.
-
+```
 ### ⚙️ Methodology (How the Recommender Works)
 
 The recommendation engine is built using Item-to-Item Collaborative Filtering.
@@ -61,30 +73,3 @@ Pivot Table Creation: The filtered data is transformed into a User-Item Pivot Ta
 Similarity Calculation: The core of the model is calculated by running the cosine_similarity function on the pivot table. This generates a matrix where each row represents a book, and the values indicate how similar that book is to every other book.
 
 Inference: When a user selects a book, the model looks up that book's index in the similarity matrix, sorts the scores, and returns the top 5 most similar books.
-
-### 🛠️ Setup 
-
-Clone the Repository (or create the files):
-
-git clone <your-repo-link>
-cd book-recommendation-engine
-
-
-📂 Project Structure
-
-.
-├── Books.csv
-├── Users.csv
-├── Ratings.csv
-├── app.py           # Main Streamlit UI and frontend logic
-├── helper.py        # Core data loading, filtering, and recommendation functions
-└── README.md        # This file
-
-
-### 👨‍💻 Contribution and Contact
-
-Feel free to fork this repository, suggest improvements, or submit pull requests.
-
-Author: [Your Name]
-
-GitHub: [Your GitHub Profile Link]
