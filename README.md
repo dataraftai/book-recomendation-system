@@ -9,7 +9,9 @@ The core technology uses a Collaborative Filtering (CF) model to identify hidden
 ### 🖼️ App Screenshots / Demo
 
 
+
 <img src="images/Screenshot (20).png" width="850">
+
 
 
 1. The Recommendation Finder
@@ -17,6 +19,7 @@ The core technology uses a Collaborative Filtering (CF) model to identify hidden
 (This screenshot will show the section where the user selects a book and gets the 5 suggestions in the nice card format.)
 
 <img src="images/Screenshot (23).png" width="850">
+
 
 2. The Popular Books Grid
 
@@ -52,6 +55,7 @@ Role : Data Science
 
 ``` text
 .
+|__images            
 ├── app.py           # The Streamlit web interface (what the user sees)
 ├── helper.py        # All the data loading, cleaning, and model logic
 ├── requirements.txt # List of all required Python libraries (e.g., streamlit, pandas)
